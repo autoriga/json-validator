@@ -108,7 +108,6 @@ public class json_val {
 
         json.start(server);
     }
-}
-
     private static void start(HttpServer server) {server.start();}
-    private static void stop (HttpServer server) {server.stop(0);}
+    private static void stop (HttpServer server) {server.stop(0);}	
+}
