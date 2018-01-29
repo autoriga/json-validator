@@ -47,6 +47,7 @@ public class json_val_class {
             // BufferedReader for text reading from a character-input stream, read until we get EOF
             BufferedReader br = new BufferedReader(new InputStreamReader(httpExchange.getRequestBody()));
             String str = br.readLine();
+			String filename = http.getRequestURI().getPath();
 
             StringBuilder stringBuilder = new StringBuilder();
             while (str != null) {
@@ -88,7 +89,7 @@ public class json_val_class {
                 error.addProperty("errorCode", errorCode);
                 error.addProperty("errorMessage", errorMessage);
                 error.addProperty("errorPlace", errorPlace);
-                error.addProperty("resource", request);
+                error.addProperty("resource", filename);
                 error.addProperty("request-id", countId);
                 response = gson.toJson(error);
             }
