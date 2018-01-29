@@ -16,7 +16,7 @@ public class json_val_class {
      * @param start/close server, that we get as a parameter
      */
     private static void start(HttpServer server) {server.start();}
-    private static void finish (HttpServer server) {server.finish(0);}
+    private static void stop (HttpServer server) {server.stop(0);}
 	
 	/**
 	*listen port and reply code
